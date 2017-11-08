@@ -1,0 +1,6 @@
+namespace TowerDefense
+{
+    class Tower
+    {
+    }    
+}
