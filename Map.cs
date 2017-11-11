@@ -10,5 +10,11 @@ namespace TowerDefense
             Width = width;
             Height = height;
         }
+
+        public bool OnMap(Point point)
+        {
+            return 0 <= point.X && point.X < Width 
+                && 0 <= point.Y && point.Y < Height;
+        }
     }    
 }
