@@ -17,5 +17,10 @@ namespace TowerDefense
         {
             return (int)Math.Sqrt(Math.Pow(X - x, 2) + Math.Pow(Y - y, 2));
         }
+
+        public int DistanceTo(Point p)
+        {
+            return DistanceTo(p.X, p.Y);
+        }
     }    
 }
