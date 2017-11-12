@@ -6,10 +6,13 @@ namespace TowerDefense
     {
         public static void Main()
         {
-            Map map = new Map(8, 5);
-            Point point = new Point(4, 2);
-            Console.WriteLine(point.DistanceTo(5, 5));
-            Console.WriteLine(point.DistanceTo(new Point(5, 5)));
+            Point m = new MapLocation(4, 2);
+            Console.WriteLine(m is Point);
+            Console.WriteLine(m is MapLocation);
+
+            Point p = new Point(5, 6);
+            Console.WriteLine(p is Point);
+            Console.WriteLine(p is MapLocation);
         }
     }    
 }
