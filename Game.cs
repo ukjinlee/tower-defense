@@ -16,6 +16,14 @@ namespace TowerDefense
             {
                 Console.WriteLine(ex.Message);
             }
+            catch (TowerDefenseException)
+            {
+                Console.WriteLine("Unhandled TowerDefenseException");
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Unhandled Exception");
+            }
         }
     }    
 }
