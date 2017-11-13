@@ -12,7 +12,7 @@ namespace TowerDefense
             {
                 MapLocation location = new MapLocation(20, 20, map);
             }
-            catch (Exception ex)
+            catch (OutOfBoundsException ex)
             {
                 Console.WriteLine(ex.Message);
             }
