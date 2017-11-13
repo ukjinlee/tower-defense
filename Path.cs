@@ -8,5 +8,14 @@ namespace TowerDefense
         {
             this.path = path;
         }
+
+        public MapLocation GetLocationAt(int pathStep)
+        {
+            if (pathStep >= path.Length)
+            {
+                return null;
+            }
+            return path[pathStep];
+        }
     }    
 }
