@@ -11,11 +11,7 @@ namespace TowerDefense
 
         public MapLocation GetLocationAt(int pathStep)
         {
-            if (pathStep >= path.Length)
-            {
-                return null;
-            }
-            return path[pathStep];
+            return (pathStep < path.Length) ? path[pathStep] : null;
         }
     }    
 }
