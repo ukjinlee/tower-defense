@@ -4,14 +4,16 @@ namespace TowerDefense
     {
         private MapLocation location;
 
-        public MapLocation GetLocation()
+        public MapLocation Location
         {
-            return location;
-        }
-
-        public void SetLocation(MapLocation value)
-        {
-            location = value;
+            get
+            {
+                return location;
+            }
+            set
+            {
+                location = value;
+            }
         }
     }    
 }
