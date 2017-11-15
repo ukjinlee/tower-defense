@@ -4,6 +4,8 @@ namespace TowerDefense
     {
         private readonly MapLocation[] path;
 
+        public int Length => path.Length;
+
         public Path(MapLocation[] path)
         {
             this.path = path;
