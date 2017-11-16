@@ -13,7 +13,11 @@ namespace TowerDefense
         {
             foreach (var invader in invaders)
             {
-                // Do stuff with invader
+                if (invader.IsActive && location.InRangeOf(invader.Location, 1))
+                {
+                    invader.DecreaseHealth(1);
+                    break;
+                }
             }
         }
     }    
