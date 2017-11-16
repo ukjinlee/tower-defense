@@ -4,7 +4,7 @@ namespace TowerDefense
     {
         private Invader[] invaders;
         
-        public Tower[] towers { get; set; }
+        public Tower[] Towers { get; set; }
 
         public Level(Invader[] invaders)
         {
@@ -17,7 +17,7 @@ namespace TowerDefense
 
             while (remainedInvaders > 0)
             {
-                foreach (var tower in towers)
+                foreach (var tower in Towers)
                 {
                     tower.FireOnInvaders(invaders);
                 }
