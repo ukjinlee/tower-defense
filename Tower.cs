@@ -4,9 +4,9 @@ namespace TowerDefense
 {
     class Tower
     {
-        private const int range = 1;
-        private const int power = 1;
-        private const double accuracy = .75;
+        protected virtual int Range { get; } = 1;
+        protected virtual int Power { get; } = 1;
+        protected virtual double Accuracy { get; } = .75;
 
         private static readonly Random random = new Random();
 
@@ -19,18 +19,18 @@ namespace TowerDefense
 
         private bool IsSuccessfulShot()
         {
-            return random.NextDouble() < accuracy;
+            return random.NextDouble() < Accuracy;
         }
 
         public void FireOnInvaders(Invader[] invaders)
         {
             foreach (var invader in invaders)
             {
-                if (invader.IsActive && location.InRangeOf(invader.Location, range))
+                if (invader.IsActive && location.InRangeOf(invader.Location, Range))
                 {
                     if (IsSuccessfulShot())
                     {
-                        invader.DecreaseHealth(power);
+                        invader.DecreaseHealth(Power);
                         if (invader.IsNeutralized)
                         {
                             Console.WriteLine("Neutralized invader!");
