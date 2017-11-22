@@ -33,7 +33,7 @@ namespace TowerDefense
                         invader.DecreaseHealth(Power);
                         if (invader.IsNeutralized)
                         {
-                            Console.WriteLine("Neutralized invader!");
+                            Console.WriteLine($"Neutralized invader at {location}!");
                         }
                     }
                     else 
