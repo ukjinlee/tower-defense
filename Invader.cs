@@ -18,6 +18,10 @@ namespace TowerDefense
         }
 
         public void Move() => pathStep++;
-        public void DecreaseHealth(int factor) => Health -= factor;
+        public virtual void DecreaseHealth(int factor)
+        {
+            Health -= factor;
+            System.Console.WriteLine("Shot at and hit an invader!");
+        }
     }    
 }
