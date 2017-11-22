@@ -5,7 +5,7 @@ namespace TowerDefense
         private readonly Path path;
         private int pathStep = 0;
         
-        public int Health { get; private set; } = 2;
+        public virtual int Health { get; protected set; } = 2;
         public MapLocation Location => path.GetLocationAt(pathStep);
         protected virtual int StepSize { get; } = 1;
         
