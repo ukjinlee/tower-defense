@@ -7,6 +7,7 @@ namespace TowerDefense
         
         public int Health { get; private set; } = 2;
         public MapLocation Location => path.GetLocationAt(pathStep);
+        protected virtual int StepSize { get; } = 1;
         
         public bool HasScored => pathStep >= path.Length;
         public bool IsNeutralized => Health <= 0;
@@ -17,7 +18,7 @@ namespace TowerDefense
             this.path = path;
         }
 
-        public void Move() => pathStep++;
+        public void Move() => pathStep += StepSize;
         public virtual void DecreaseHealth(int factor)
         {
             Health -= factor;
