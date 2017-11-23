@@ -26,5 +26,10 @@ namespace TowerDefense
             Point that = obj as Point;
             return this.X == that.X && this.Y == that.Y;
         }
+
+        public override int GetHashCode()
+        {
+            return X.GetHashCode() * 31 + Y.GetHashCode();
+        }
     }    
 }
